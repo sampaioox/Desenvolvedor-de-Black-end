@@ -1,0 +1,31 @@
+#desafio 3
+
+#4.
+i = 1
+while i <= 10:
+   print(i)
+   i += 1
+
+#5
+for i in range(2, 20, 2):
+   print( i )
+
+#6
+soma = 0
+for i in range(5):
+   numero = float(input(f"digite o {i+1}º número: "))
+   soma += numero
+   print("A soma dos números é:", soma)
+
+#7
+for i in range(1, 11):
+   print(f"7 x {i} = {7 * i}")
+
+#8
+soma = 0
+while True:
+   numero = float(input("digite um numero (0 para parar): "))
+   if numero == 0:
+      break
+   soma += numero
+   print("A soma dos numeros é:", soma)
