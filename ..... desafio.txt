@@ -1,0 +1,20 @@
+ #desafio da msm aula 
+
+#lista vazia
+lista_compras = []
+print("=== lista de compras ===")
+print("digite 'sair' para encerrar .\n")
+
+#loop para inserir itens na lista 
+while True:
+    item = input("digite um item para adicionar a lista: ")
+    if item.lower() == 'sair':  #se digitar 'sair', para o loop
+        break
+    lista_compras.append(item) #adiciona item na lista
+    print(f"'{item}' adicionado com sucesso!\n")
+
+    #mostra a lista atualizada 
+print("\n=== sua lista de compras ===")
+print("itens atualizados:")
+
+
