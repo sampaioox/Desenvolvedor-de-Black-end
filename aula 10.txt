@@ -1,0 +1,43 @@
+#aula 10 16/09/25
+
+#1. remover duplicatas de uma lista
+numeros = [1, 2, 2, 3, 4, 4, 5, 1]
+
+#converter para set para remover duplicatas
+numeros_sem_duplicatas = list(set(numeros))
+print("lista original:", numeros)
+print("lista sem duplicatas:", numeros_sem_duplicatas)
+
+#2. verificar elementos em comum
+lista1 = ["ana", "carlos", "joão"]
+lista2 = ["maria", "carlos", "pedro"]
+
+#converter para conjunto 
+set1 = set(lista1)
+set2 = set(lista2)
+
+#interseção dos conjuntos
+nomes_em_comum = set1.intersection(set2)
+print("\nlista 1:", lista1)
+print("lista 2:", lista2)
+print("nomes em comum:", nomes_em_comum)
+
+3.
+
+print("mostre quais nomes estão apenas na lista 1 e não na lista 2")
+nomes_apenas_lista1 = set1.difference(set2)
+print("nomes apenas na lista 1:", nomes_apenas_lista1)
+
+4.
+
+# Solicita que o usuário digite uma frase
+frase = input("Digite uma frase: ")
+
+# Separa as palavras usando split e transforma em um conjunto para eliminar duplicatas
+palavras_unicas = set(frase.split())
+
+# Mostra as palavras únicas
+print("Palavras únicas digitadas:")
+for palavra in palavras_unicas:
+    print(palavra)
+
