@@ -1,0 +1,53 @@
+  #aula 12 dia 18/09/25
+#exercicio calculadora de IMC 
+
+#1.
+#função para calcular Imc
+def calcular_imc(peso, altura):
+    """
+    recebe peso (kg) e altura (m)
+    retorna o valor do imc
+    """
+    return peso / (altura ** 2)
+
+#função para classificar o IMC
+def classificar_imc(imc):
+    """
+    recebe o valor do imc
+    retorna a classificação conforme tabela
+    """
+    if imc < 18.5:
+      return "abaixo do peso"
+    elif 18.5 <= imc <= 24.9:
+      return "peso normal"
+    elif 25 <= imc <= 29.9:
+      return "sobre peso"
+    elif 30 <= imc <= 39.9:
+      return "obsidade"
+    else:
+      return "obsidade grave"
+
+#progama principal
+def main ():
+     #entrada de dados 
+     peso = float(input("digite seu peso (kg):"))
+     altura = float(input("digite sua altura (m):"))
+
+     #calcula o imc
+     imc = calcular_imc(peso, altura)
+
+     #classificar o imc
+     classificação = classificar_imc(imc)
+
+     #mostrar resultados
+     print(f"seu imc é: {imc:.2f}")
+     print(f"classificação: {classificar_imc}")
+
+#chamada do progama principal
+main()
+
+
+
+
+
+
