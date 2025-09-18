@@ -1,0 +1,66 @@
+#aula 11 - estrutura de dados dia 17/09/25
+#1
+
+def verificar_caracteres_unicos(palavra):
+  # Cria um conjunto a partir dos caracteres da palavra
+  conjunto_caracteres = set(palavra)
+  
+  # Compara o tamanho do conjunto com o comprimento da palavra
+  if len(palavra) == len(conjunto_caracteres):
+    return "A palavra possui todos os caracteres únicos."
+  else:
+    return "A palavra possui caracteres repetidos."
+
+# Exemplo de uso
+palavra1 = "abcde"
+palavra2 = "carrocel"
+
+print(f"'{palavra1}': {verificar_caracteres_unicos(palavra1)}") # Saída: A palavra possui todos os caracteres únicos.
+print(f"'{palavra2}': {verificar_caracteres_unicos(palavra2)}") # Saída: A palavra possui caracteres repetidos.
+
+#2
+
+#ecercicio dicionario
+meu_dicionario_pessoa = {
+    "nome": "Victor",
+    "idade": 18,
+    "cidade": "são paulo"
+}
+print(meu_dicionario_pessoa["nome"]) #saida: Victor
+print(meu_dicionario_pessoa["idade"]) #saida: 18
+print(meu_dicionario_pessoa["cidade"]) #saida: são paulo
+
+#3
+
+#soma dos valores do dicionario
+meu_dicionario_numeros = {
+    "banana": 3.50,
+    "maça": 2.80,
+    "uva": 4.00
+}
+soma_valores = sum(meu_dicionario_numeros.values())
+print("soma dos valores:", soma_valores)
+
+#4
+
+#crie um dicionario onde a palvra chave o o valor é o numero de vezes que ela aparece
+frase = "o rato roeu a roupa do rei de roma e a rainha de raiva roeu o resto"
+palavra = frase.split() #separa as palavras
+contador_de_palavras ={}
+for p in palavra:
+    if p in contador_de_palavras:
+       contador_de_palavras[p] += 1
+    else:
+       contador_de_palavras[p] = 1
+       print(contador_de_palavras)
+
+#5
+#crie um dicionario chamado agenda onde cada chave é o nome de uma pessoa e o valor é uma lista apenas dois contatos depois mostre os nomes e os respectivos numeros
+agenda = {
+"Ana": ["1234-5678", "9999-9999"],
+"Carlos": ["2345-6789", "2376-76825"],
+"Maria" : ["3456-7890", "7297-9270"]
+}
+print("agenda de contatos:")
+for nome in agenda:
+    print(f"{nome}: {agenda[nome]}")
