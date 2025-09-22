@@ -1,0 +1,114 @@
+  #aula 12 dia 18/09/25
+#exercicio calculadora de IMC 
+
+#1.
+#função para calcular Imc
+def calcular_imc(peso, altura):
+    """
+    recebe peso (kg) e altura (m)
+    retorna o valor do imc
+    """
+    return peso / (altura ** 2)
+
+#função para classificar o IMC
+def classificar_imc(imc):
+    """
+    recebe o valor do imc
+    retorna a classificação conforme tabela
+    """
+    if imc < 18.5:
+      return "abaixo do peso"
+    elif 18.5 <= imc <= 24.9:
+      return "peso normal"
+    elif 25 <= imc <= 29.9:
+      return "sobre peso"
+    elif 30 <= imc <= 39.9:
+      return "obsidade"
+    else:
+      return "obsidade grave"
+
+#progama principal
+def main ():
+     #entrada de dados 
+     peso = float(input("digite seu peso (kg):"))
+     altura = float(input("digite sua altura (m):"))
+
+     #calcula o imc
+     imc = calcular_imc(peso, altura)
+
+     #classificar o imc
+     classificação = classificar_imc(imc)
+
+     #mostrar resultados
+     print(f"seu imc é: {imc:.2f}")
+     print(f"classificação: {classificação}")
+
+#chamada do progama principal
+main()
+
+
+2.
+class ContaBancaria:
+    def __init__(self, titular):
+        """
+        Inicializa uma nova conta bancária.
+
+        Args:
+            titular (str): O nome do titular da conta.
+        """
+        self.titular = titular
+        self.saldo = 0
+
+    def depositar(self, valor):
+        """
+        Adiciona um valor ao saldo da conta.
+
+        Args:
+            valor (float): O valor a ser depositado.
+        """
+        if valor > 0:
+            self.saldo += valor
+            print(f"Depósito de {valor:.2f} realizado com sucesso.")
+        else:
+            print("O valor do depósito deve ser positivo.")
+
+    def sacar(self, valor):
+        """
+        Subtrai um valor do saldo da conta se houver saldo suficiente.
+
+        Args:
+            valor (float): O valor a ser sacado.
+        """
+        if valor > 0:
+            if self.saldo >= valor:
+                self.saldo -= valor
+                print(f"Saque de {valor:.2f} realizado com sucesso.")
+            else:
+                print("Erro: Saldo insuficiente para realizar o saque.")
+        else:
+            print("O valor do saque deve ser positivo.")
+
+    def __str__(self):
+        """
+        Retorna uma representação em string da conta bancária.
+        """
+        return f"Conta do titular: {self.titular}, Saldo: {self.saldo:.2f}"
+
+# Exemplo de uso:
+minha_conta = ContaBancaria("Marcos")
+print(minha_conta)
+
+minha_conta.depositar(500)
+print(minha_conta)
+
+minha_conta.sacar(200)
+print(minha_conta)
+
+minha_conta.sacar(400) # Tentativa de saque com saldo insuficiente
+print(minha_conta)
+
+
+
+
+
+
