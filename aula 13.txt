@@ -1,0 +1,41 @@
+#aula 13 dia 22/09/25
+
+
+class Vendedor:
+    """
+    Representa um vendedor com suas metas e vendas.
+    """
+    def __init__(self, nome, meta, vendas):
+        """
+        Construtor da classe Vendedor.
+        Inicializa um novo objeto Vendedor com nome, meta e vendas.
+        
+        Args:
+            nome (str): O nome do vendedor.
+            meta (int): A meta de vendas do vendedor.
+            vendas (int): O número de vendas realizadas pelo vendedor.
+        """
+        self.nome = nome
+        self.meta = meta
+        self.vendas = vendas
+
+    def exibir_desempenho(self):
+        """
+        Exibe o desempenho do vendedor, comparando vendas com a meta.
+        """
+        print(f"Relatório de Desempenho para {self.nome}:")
+        print(f"Meta: {self.meta} vendas")
+        print(f"Vendas realizadas: {self.vendas}")
+        
+        if self.vendas >= self.meta:
+            print("Status: Meta atingida! ")
+        else:
+            faltam = self.meta - self.vendas
+            print(f"Status: Meta não atingida. Faltam {faltam} vendas.")
+
+# Exemplo de uso da classe
+# Cria uma instância (objeto) da classe Vendedor com os dados do Fernando
+fernando = Vendedor(nome="Fernando", meta=500, vendas=400)
+
+# Chama o método para exibir o desempenho do Fernando
+fernando.exibir_desempenho()
