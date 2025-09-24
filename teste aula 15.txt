@@ -1,0 +1,20 @@
+import pyautogui
+import time
+
+pyautogui.PAUSE = 1
+pyautogui.FAILSAFE = True
+
+#passo 1 abrir o navegador 
+pyautogui.press('win')
+pyautogui.write('chrome')
+pyautogui.press('enter')
+time.sleep(3)
+
+#escolher usuario
+pyautogui.click(x=679, y=418)
+
+#passo2: acessar o site 
+pyautogui.click(x=298, y=59)
+pyautogui.write('https://github.com')
+pyautogui.press('enter')
+time.sleep(3)
