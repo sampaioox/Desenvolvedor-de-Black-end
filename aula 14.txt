@@ -1,0 +1,88 @@
+#aula 14 dia 23/09/2025
+
+class Usuario:
+    def __init__(self, nome, email, senha):
+        self.nome = nome
+        self.email = email
+        self.senha = senha
+
+    def exibir_dados(self):
+        print(f"Nome: {self.nome}")
+        print(f"Email: {self.email}")
+        print("-" * 20) # Um separador para melhor visualização
+
+    def alterar_senha(self, nova_senha):
+        self.senha = nova_senha
+        print("Senha alterada com sucesso!")
+
+    def autenticar(self, email, senha):
+        if self.email == email and self.senha == senha:
+            return True
+        else:
+            return False
+    def __str__(self):
+        return f"usuario: {self.nome} - {self.email}"
+    
+# Crie dois Usuario
+usuario1 = Usuario("João Silva", "joao.silva@email.com", "senha123")
+usuario2 = Usuario("Maria Souza", "maria.souza@email.com", "senha456")
+
+# ---
+# 4. Teste:
+print("--- TESTE ---")
+
+# a) Exibir os dados de cada usuário
+print("\n--- a) Mostrando os dados dos usuários:")
+usuario1.exibir_dados()
+usuario2.exibir_dados()
+
+# b)Exibir os dados de cada usuário
+print("\n--- b) Alterando a senha do usuário 1:")
+usuario1.alterar_senha("nova_senha_do_joao")
+
+# c) Teste a autenticação (tentativas corretas e incorretas)
+print("\n--- c) Testando a autenticação:")
+
+# Teste de autenticação correto para usuario1
+print("Tentativa de autenticação correta para o usuário 1...")
+if usuario1.autenticar("joao.silva@email.com", "nova_senha_do_joao"):
+    print("Autenticação bem-sucedida! (Teste correto)")
+else:
+    print("Autenticação falhou. (Erro)")
+
+# Teste de autenticação incorreto para usuario2
+print("\nTentativa de autenticação incorreta para o usuário 2...")
+if usuario2.autenticar("maria.souza@email.com", "senha_incorreta"):
+    print("Autenticação bem-sucedida. (Erro)")
+else:
+    print("Autenticação falhou. (Teste incorreto)")
+
+
+#calculadora_de_raiz
+import math
+
+print(math.sqrt(16))                    
+
+import PyPDF2
+from PYPDF2.errors import pdfreadError
+
+def ler_pdf(caminho_arquivo):
+    try:
+        with open(caminho_arquivo, 'rb') as arquivo_pdf:
+            pdf = PyPDF.PdfReader(arquivo_pdf)
+            texto_primeira_pagina = pdf.pages[0].extract_text()
+            return texto_primeira_pagina
+        
+    except FileNotFoundError:
+        print("arquivo nao encontrado")
+        return None
+    except pdfreadError:
+        print("erro ao ler arquivo em PDF")
+        return None
+    
+caminho = input("digite o caminho do arquivo PDF: ").strip('"')
+conteudo = ler_pdf(caminho)
+
+if conteudo:
+    print("conteudo da primeira pagina:")
+    print(conteudo)
