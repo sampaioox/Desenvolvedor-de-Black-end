@@ -1,0 +1,12 @@
+import pygame
+import randon
+import sys
+
+#inicializa o pygame
+pygame.init()
+
+#configuraçoes da tela
+largura = 500
+altura = 500
+tela = pygame.display.set_mode((largura, altura))
+
