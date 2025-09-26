@@ -51,4 +51,15 @@ for linha in linhas:
     linhas_formadas.append(f"{nome.upper()};{idade}\n")
 
 with open("usuario.txt", "w") as arq:
+
     arq.writelines(linhas_formadas)
+
+6.
+
+#criar um arquivo com 'x' e trata erro se ele ja exitir
+
+try:
+    with open("log.txt", "x") as arq:
+        arq.write("arquivo criado com sucesso!\n")
+except FileExistsError:
+    print("o arquivo log.txt já exite.")
