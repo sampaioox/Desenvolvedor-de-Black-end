@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glamour Beauty - Loja de Maquiagem</title>
+    <style>
+        /* ======= ESTILO GERAL ======= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #fff5f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #e91e63;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background-color: #f06292;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffe4ec;
+        }
+
+        /* ======= SEÇÃO HERO ======= */
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            background: rgba(0,0,0,0.4);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        /* ======= PRODUTOS ======= */
+        .produtos {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .produtos h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #e91e63;
+        }
+
+        .grid-produtos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .produto {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .produto:hover {
+            transform: scale(1.05);
+        }
+
+        .produto img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .produto h3 {
+            color: #e91e63;
+            margin: 15px 0 5px;
+        }
+
+        .produto p {
+            margin-bottom: 10px;
+        }
+
+        .produto button {
+            background-color: #e91e63;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .produto button:hover {
+            background-color: #c2185b;
+        }
+
+        /* ======= RODAPÉ ======= */
+        footer {
+            background-color: #f06292;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>💋 Glamour Beauty</h1>
+        <p>Sua autoestima tem valor!, Realce sua beleza todos os dias!</p>
+    </header>
+
+    <nav>
+        <a href="#Inicio">Início</a>
+        <a href="#Produtos">Catalogo</a>
+        <a href="#Redes de contato">Redes de Contato</a>
+    </nav>
+
+    <section class="hero" id="inicio">
+        <h2>Maquiagem que inspira confiança</h2>
+        <p>Descubra produtos incríveis para todos os estilos e tons de pele.</p>
+    </section>
+
+    <section class="produtos" id="produtos">
+        <h2>Nossos Produtos</h2>
+        <div class="grid-produtos">
+            <div class="produto">
+                <img src="c:\Users\Aluno\Downloads\batom-vermelho-sobre-fundo-branco.jpg">
+                <h3>Batom Matte</h3>
+                <p>R$ 58,90</p>
+                <button>Comprar</button>
+            </div>
+
+            <div class="produto">
+                <img src="c:\Users\Aluno\Downloads\natureza-morta-da-marca-produto-de-fundacao.jpg">
+                <h3>Base Líquida</h3>
+                <p>R$ 76,90</p>
+                <button>Comprar</button>
+            </div>
+
+            <div class="produto">
+                <img src="c:\Users\Aluno\Downloads\vista-da-paleta-de-sombras-com-tons-de-po-cosmetico.jpg">
+                <h3>Paleta de Sombras</h3>
+                <p>R$ 66,90</p>
+                <button>Comprar</button>
+            </div>
+
+            <div class="produto">
+                <img src="c:\Users\Aluno\Downloads\arranjo-da-vista-superior-com-pinceis-de-maquiagem.jpg">
+                <h3>Kit de Pincéis</h3>
+                <p>R$ 20,90</p>
+                <button>Comprar</button>
+            </div>
+            
+            <div class="produto">
+                <img src="c:\Users\Aluno\Downloads\composicao-de-produtos-naturais-de-autocuidado-de-vista-frontal.jpg">
+                <h3>Kit de skin care natural</h3>
+                <p>R$ 123,60</p>
+                <button>Comprar</button>
+            </div>
+                <div class="produto">
+                <img src="c:\Users\Aluno\Downloads\mascara-444164_1280.jpg">
+                <h3>rímel</h3>
+                <p>R$ 15,60</p>
+                <button>Comprar</button>
+            </div>
+    </section>
+
+    <footer id="contato">
+        <p>📍 Avenida dos trabalhadores, 20 - Mogi Guaçu/SP</p>
+        <p>📞 (11) 99999-9999 | ✉️ contato@glamourbeauty.com.br</p>
+        <p>📍 Adm Ana Júlia spm | ✉️ contato@annajuliaspm@gmail.com </p>
+        <p>📞 entre em contatos com nossos adms caso aconteça um erro de entrega ou devolução! </p>
+        <p>&copy; 2025 Glamour Beauty - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Alerta de compra simulada
+        const botoes = document.querySelectorAll('.produto button');
+        botoes.forEach(btn => {
+            btn.addEventListener('click', () => {
+                alert('Produto adicionado ao carrinho! 💖');
+            });
+        });
+    </script>
+</body>
+</html>
